@@ -13,3 +13,4 @@ Développé avec Python et la librairie `python-telegram-bot`.
 2. Installer les dépendances :  
 ```bash
 pip install -r requirements.txt
+python bot.py
