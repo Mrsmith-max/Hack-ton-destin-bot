@@ -1,22 +1,3 @@
-Mise à jour bot.py# Hack Ton Destin Bot
-
-Bot Telegram qui envoie automatiquement un ebook PDF aux utilisateurs.
-
-## Description
-
-Ce bot permet d'envoyer un ebook PDF à toute personne qui interagit avec lui.  
-Développé avec Python et la librairie `python-telegram-bot`.  
-
-## Installation
-
-1. Cloner ce dépôt  
-2. Installer les dépendances :  
-```bash
-
-pip install -r requirements.txt
-python bot.
-python-telegram-bot==20.3
-python-dotenv
 import os
 from dotenv import load_dotenv
 from telegram import Update
@@ -46,3 +27,4 @@ if __name__ == '__main__':
         app.add_handler(CommandHandler("start", start))
         print("Bot démarré...")
         app.run_polling()
+        
