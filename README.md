@@ -11,12 +11,12 @@ TOKEN = os.getenv("BOT_TOKEN")
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Bienvenue ! Voici ton ebook 📘")
 
-    # Envoyer le fichier PDF
+    # Envoyer le fichier PDF (nom du fichier mis à jour)
     try:
-        with open("ebook.pdf", "rb") as pdf_file:
+        with open("Hack_Ton_Destin_Starter_Pack.pdf", "rb") as pdf_file:
             await update.message.reply_document(pdf_file)
     except FileNotFoundError:
-        await update.message.reply_text("Erreur : le fichier ebook.pdf est introuvable.")
+        await update.message.reply_text("Erreur : le fichier PDF est introuvable.")
 
 # Initialiser et lancer le bot
 if __name__ == '__main__':
@@ -26,5 +26,4 @@ if __name__ == '__main__':
         app = ApplicationBuilder().token(TOKEN).build()
         app.add_handler(CommandHandler("start", start))
         print("Bot démarré...")
-        app.run_polling()Correction du code bot.py
-        
+        app.run_polling()
